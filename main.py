@@ -7,6 +7,10 @@ import requests
 from urllib.request import urlopen
 import json
 import os
+from os import getenv
+from dotenv import load_dotenv
+
+load_dotenv()
 
 client = commands.Bot(command_prefix="!")
 
@@ -70,4 +74,4 @@ async def ajuda(ctx):
     
     await ctx.send(embed=embed)
 
-client.run("ODgzMDE4MjEwMzA2MzAxOTgz.YTD0yw.l_UocwtPqJITeEtjwirYeMGxj1Y")
+client.run(os.getenv('DISCORD_TOKEN_LENDARIO'))
